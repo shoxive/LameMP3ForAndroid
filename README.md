@@ -1,0 +1,2 @@
+# LameMP3ForAndroid
+依赖于lame官方源码编译的so库，实现音频实时转码，PCM文件转MP3文件
