@@ -10,12 +10,12 @@
 
 static lame_global_flags *glf = NULL;
 
-void Java_com_shoxive_lamemp3_LameSDK_close(JNIEnv *env, jclass type) {
+void Java_com_shoxive_lamemp3_LameSDK_close(JNIEnv *env, jobject obj) {
     lame_close(glf);
     glf = NULL;
 }
 
-jint Java_com_shoxive_lamemp3_LameSDK_encode(JNIEnv *env, jclass type, jshortArray buffer_l_,
+jint Java_com_shoxive_lamemp3_LameSDK_encode(JNIEnv *env, jobject obj, jshortArray buffer_l_,
                                              jshortArray buffer_r_, jint samples,
                                              jbyteArray mp3buf_) {
     jshort *buffer_l = env->GetShortArrayElements(buffer_l_, NULL);
@@ -34,7 +34,7 @@ jint Java_com_shoxive_lamemp3_LameSDK_encode(JNIEnv *env, jclass type, jshortArr
     return result;
 }
 
-jint Java_com_shoxive_lamemp3_LameSDK_flush(JNIEnv *env, jclass type, jbyteArray mp3buf_) {
+jint Java_com_shoxive_lamemp3_LameSDK_flush(JNIEnv *env, jobject obj, jbyteArray mp3buf_) {
     jbyte *mp3buf = env->GetByteArrayElements(mp3buf_, NULL);
 
     const jsize mp3buf_size = env->GetArrayLength(mp3buf_);
@@ -46,7 +46,7 @@ jint Java_com_shoxive_lamemp3_LameSDK_flush(JNIEnv *env, jclass type, jbyteArray
     return result;
 }
 
-void Java_com_shoxive_lamemp3_LameSDK_init_IIIII(JNIEnv *env, jclass type, jint inSampleRate,
+void Java_com_shoxive_lamemp3_LameSDK_init(JNIEnv *env, jobject obj, jint inSampleRate,
                                                   jint outChannel,
                                                   jint outSampleRate, jint outBitrate,
                                                   jint quality) {
