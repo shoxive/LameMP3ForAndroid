@@ -4,7 +4,6 @@
 //
 
 #include <jni.h>
-
 extern "C"
 {
 void Java_com_shoxive_lamemp3_LameSDK_close(JNIEnv *env, jobject obj);
