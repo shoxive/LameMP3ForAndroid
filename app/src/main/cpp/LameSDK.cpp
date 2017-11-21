@@ -47,7 +47,7 @@ jint Java_com_shoxive_lamemp3_LameSDK_flush(JNIEnv *env, jobject obj, jbyteArray
     return result;
 }
 
-void Java_com_shoxive_lamemp3_LameSDK_init__IIIII(JNIEnv *env, jobject obj, jint inSampleRate,
+void Java_com_shoxive_lamemp3_LameSDK_init(JNIEnv *env, jobject obj, jint inSampleRate,
                                                   jint outChannel,
                                                   jint outSampleRate, jint outBitrate,
                                                   jint quality) {

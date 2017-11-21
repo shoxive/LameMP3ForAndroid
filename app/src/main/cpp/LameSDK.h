@@ -7,14 +7,14 @@
 
 extern "C"
 {
-void Java_com_clam314_lame_SimpleLame_close(JNIEnv *env, jobject obj);
+void Java_com_shoxive_lamemp3_LameSDK_close(JNIEnv *env, jobject obj);
 
-jint Java_com_clam314_lame_SimpleLame_encode(JNIEnv *env, jobject obj, jshortArray buffer_l_,
+jint Java_com_shoxive_lamemp3_LameSDK_encode(JNIEnv *env, jobject obj, jshortArray buffer_l_,
                                              jshortArray buffer_r_, jint samples, jbyteArray mp3buf_);
 
-jint Java_com_clam314_lame_SimpleLame_flush(JNIEnv *env, jobject obj, jbyteArray mp3buf_);
+jint Java_com_shoxive_lamemp3_LameSDK_flush(JNIEnv *env, jobject obj, jbyteArray mp3buf_);
 
-void Java_com_clam314_lame_SimpleLame_init__IIIII(JNIEnv *env, jobject obj, jint inSampleRate,
+void Java_com_shoxive_lamemp3_LameSDK_init(JNIEnv *env, jobject obj, jint inSampleRate,
                                                   jint outChannel, jint outSampleRate, jint outBitrate, jint quality);
 jstring Java_com_shoxive_lamemp3_LameSDK_getLameVersion(JNIEnv *env, jobject obj);
 
